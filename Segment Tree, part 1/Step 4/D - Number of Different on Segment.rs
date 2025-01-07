@@ -1,0 +1,166 @@
+use core::num;
+use std::cmp::*;
+use std::collections::*;
+use std::fmt::Display;
+use std::io::{stdin, stdout, Write};
+use std::mem::swap;
+use std::ops::Add;
+use std::ops::Mul;
+use std::ops::Rem;
+use std::rc;
+use std::slice::*;
+use std::usize;
+use std::vec;
+
+struct Cin {
+    tokens: VecDeque<String>,
+}
+
+impl Cin {
+    pub fn new() -> Self {
+        let tokens = VecDeque::new();
+        Self { tokens }
+    }
+    pub fn next<T: std::str::FromStr>(&mut self) -> T {
+        if self.tokens.is_empty() {
+            let mut buffer = String::new();
+            std::io::stdin().read_line(&mut buffer).unwrap();
+            for s in buffer.split_whitespace() {
+                self.tokens.push_back(s.to_string());
+            }
+        }
+        let fr = self.tokens.pop_front().unwrap_or(String::new());
+        fr.parse::<T>().ok().unwrap()
+    }
+}
+
+mod cm_seg_tree_capture {
+    use std::ops::Range;
+
+    // [l, r)
+    pub struct SegmentTree<F, T: Default + Copy>
+    where
+        F: Fn(&T, &T) -> T,
+    {
+        len: usize,
+        tree: Vec<T>,
+        merge: F,
+    }
+
+    impl<F, T: Default + Copy> SegmentTree<F, T>
+    where
+        F: Fn(&T, &T) -> T,
+    {
+        pub fn from_vec(arr: &[T], merge: F) -> Self {
+            let len = arr.len();
+
+            let mut pow_2 = len.ilog2() as usize;
+            if len & (len - 1) != 0 {
+                pow_2 += 1;
+            }
+            let pow_2_len = 1 << pow_2;
+
+            let mut sgtr = SegmentTree {
+                len,
+                tree: vec![T::default(); 2 * pow_2_len - 1],
+                merge,
+            };
+
+            sgtr.build_recursive(arr, 0, 0..len);
+            sgtr
+        }
+
+        // range: [l, r). O(log(n))
+        pub fn query(&self, range: Range<usize>) -> Option<T> {
+            self.query_recursive(0, 0..self.len, &range)
+        }
+
+        // range: [l, r). O(log(n))
+        pub fn update(&mut self, idx: usize, val: T) {
+            self.update_recursive(0, 0..self.len, idx, val);
+        }
+
+        fn build_recursive(&mut self, arr: &[T], idx: usize, range: Range<usize>) {
+            if range.end - range.start == 1 {
+                self.tree[idx] = arr[range.start];
+            } else {
+                let mid = range.start + (range.end - range.start) / 2;
+                self.build_recursive(arr, 2 * idx + 1, range.start..mid);
+                self.build_recursive(arr, 2 * idx + 2, mid..range.end);
+                self.tree[idx] = (self.merge)(&self.tree[2 * idx + 1], &self.tree[2 * idx + 2]);
+            }
+        }
+
+        fn query_recursive(
+            &self,
+            idx: usize,
+            element_range: Range<usize>,
+            query_range: &Range<usize>,
+        ) -> Option<T> {
+            if element_range.start >= query_range.end || element_range.end <= query_range.start {
+                return None;
+            }
+            if element_range.start >= query_range.start && element_range.end <= query_range.end {
+                return Some(self.tree[idx]);
+            }
+            let mid = element_range.start + (element_range.end - element_range.start) / 2;
+            let left = self.query_recursive(idx * 2 + 1, element_range.start..mid, query_range);
+            let right = self.query_recursive(idx * 2 + 2, mid..element_range.end, query_range);
+            match (left, right) {
+                (None, None) => None,
+                (None, Some(r)) => Some(r),
+                (Some(l), None) => Some(l),
+                (Some(l), Some(r)) => Some((self.merge)(&l, &r)),
+            }
+        }
+
+        fn update_recursive(
+            &mut self,
+            idx: usize,
+            element_range: Range<usize>,
+            element_idx: usize,
+            val: T,
+        ) {
+            if element_range.start > element_idx || element_range.end <= element_idx {
+                return;
+            }
+            if element_range.end - element_range.start == 1 && element_range.start == element_idx {
+                self.tree[idx] = val;
+                return;
+            }
+            let mid = element_range.start + (element_range.end - element_range.start) / 2;
+            self.update_recursive(idx * 2 + 1, element_range.start..mid, element_idx, val);
+            self.update_recursive(idx * 2 + 2, mid..element_range.end, element_idx, val);
+            self.tree[idx] = (self.merge)(&self.tree[idx * 2 + 1], &self.tree[idx * 2 + 2]);
+        }
+    }
+}
+
+fn main() {
+    let mut cin = Cin::new();
+
+    let _t = 1;
+    for _ in 0.._t {
+        let (n, m) = (cin.next::<i64>(), cin.next::<usize>());
+
+        let mut a: Vec<usize> = vec![];
+        for _ in 0..n {
+            let x = cin.next::<usize>();
+            a.push(1 << x);
+        }
+
+        let mut tree = cm_seg_tree_capture::SegmentTree::from_vec(&a, |&a, &b| a | b);
+
+        for _ in 0..m {
+            let t = cin.next::<usize>();
+            if t == 2 {
+                let (i, v) = (cin.next::<usize>(), cin.next::<usize>());
+                tree.update(i - 1, 1 << v)
+            } else {
+                let (l, r) = (cin.next::<usize>(), cin.next::<usize>());
+                let s = tree.query((l - 1)..r).unwrap();
+                println!("{ans}", ans = s.count_ones());
+            }
+        }
+    }
+}
