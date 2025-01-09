@@ -2,7 +2,7 @@
 # [ITMO Academy: pilot course](https://codeforces.com/edu/course/2)
 
 ## Content
-- Suffix Array
+- **Suffix Array**
   - Step 1
     - [Suffix Array - 1](Suffix%20Array/Step%201/A%20-%20Suffix%20Array%20-%201.rs)
   - Step 2
@@ -17,7 +17,7 @@
     - [Longest Common Substring](Suffix%20Array/Step%205/B%20-%20Longest%20Common%20Substring.rs)
     - [Sorting Substrings](Suffix%20Array/Step%205/C%20-%20Sorting%20Substrings.rs)
       
-- Segment Tree, part 1
+- **Segment Tree, part 1**
   - Step 1
     - [Segment Tree for the Sum](Segment%20Tree%2C%20part%201/Step%201/A%20-%20Segment%20Tree%20for%20the%20Sum.rs)
     - [Segment Tree for the Minimum](Segment%20Tree%2C%20part%201/Step%201/B%20-%20Segment%20Tree%20for%20the%20Minimum.rs)
@@ -38,7 +38,7 @@
     - [Cryptography](Segment%20Tree%2C%20part%201/Step%204/B%20-%20Cryptography.rs)
     - [Number of Different on Segment](Segment%20Tree%2C%20part%201/Step%204/D%20-%20Number%20of%20Different%20on%20Segment.rs)
 
-- Segment Tree, part 2
+- **Segment Tree, part 2**
   - Step 1
     - [Addition to Segment](Segment%20Tree%2C%20part%202/Step%201/A%20-%20Addition%20to%20Segment.rs)
     - [Applying MAX to Segment](Segment%20Tree%2C%20part%202/Step%201/B%20-%20Applying%20MAX%20to%20Segment.rs)
@@ -57,7 +57,7 @@
   - Step 4
     - [Assignment, Addition, and Sum](Segment%20Tree%2C%20part%202/Step%204/A%20-%20Assignment%2C%20Addition%2C%20and%20Sum.rs)
    
-- Binary Search
+- **Binary Search**
   - Step 1
     - [Binary Search](Binary%20Search/Step%201/A%20-%20Binary%20Search.rs)
     - [Closest to the Left](Binary%20Search/Step%201/B%20-%20Closest%20to%20the%20Left.rs)
@@ -85,7 +85,7 @@
     - [Multiplication Table](Binary%20Search/Step%205/B%20-%20Multiplication%20Table.rs)
     - [K-th Sum](Binary%20Search/Step%205/C%20-%20K-th%20Sum.rs)
 
-- Disjoint Sets Union
+- **Disjoint Sets Union**
   - Step 1
     - [Disjoint Sets Union](Disjoint%20Sets%20Union/Step%201/A%20-%20Disjoint%20Sets%20Union.rs)
     - [Disjoint Sets Union 2](Disjoint%20Sets%20Union/Step%201/B%20-%20Disjoint%20Sets%20Union%202.rs)
