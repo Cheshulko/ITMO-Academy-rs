@@ -56,3 +56,31 @@
     - [Addition and First element at least X](Segment%20Tree%2C%20part%202/Step%203/C%20-%20Addition%20and%20First%20element%20at%20least%20X.rs)
   - Step 4
     - [Assignment, Addition, and Sum](Segment%20Tree%2C%20part%202/Step%204/A%20-%20Assignment%2C%20Addition%2C%20and%20Sum.rs)
+   
+- Binary Search
+  - Step 1
+    - [Binary Search](Binary%20Search/Step%201/A%20-%20Binary%20Search.rs)
+    - [Closest to the Left](Binary%20Search/Step%201/B%20-%20Closest%20to%20the%20Left.rs)
+    - [Closest to the Right](Binary%20Search/Step%201/C%20-%20Closest%20to%20the%20Right.rs)
+    - [Fast search](Binary%20Search/Step%201/D%20-%20Fast%20search.rs)
+  - Step 2
+    - [Packing Rectangles](Binary%20Search/Step%202/A%20-%20Packing%20Rectangles.rs)
+    - [Ropes](Binary%20Search/Step%202/B%20-%20Ropes.rs)
+    - [Very Easy Task](Binary%20Search/Step%202/C%20-%20Very%20Easy%20Task.rs)
+    - [Children Holiday](Binary%20Search/Step%202/D%20-%20Children%20Holiday.rs)
+    - [Equation](Binary%20Search/Step%202/E%20-%20Equation.rs)
+    - [String Game](Binary%20Search/Step%202/F%20-%20String%20Game.rs)
+    - [Student Councils](Binary%20Search/Step%202/G%20-%20Student%20Councils.rs)
+    - [Hamburgers](Binary%20Search/Step%202/H%20-%20Hamburgers.rs)
+  - Step 3
+    - [Get together](Binary%20Search/Step%203/A%20-%20Get%20together.rs)
+    - [Splitting an Array](Binary%20Search/Step%203/B%20-%20Splitting%20an%20Array.rs)
+    - [Cows in Stalls](Binary%20Search/Step%203/C%20-%20Cows%20in%20Stalls.rs)
+    - [Minimum maximum on the Path](Binary%20Search/Step%203/D%20-%20Minimum%20maximum%20on%20the%20Path.rs)
+  - Step 4
+    - [Maximum Average Segment](Binary%20Search/Step%204/A%20-%20Maximum%20Average%20Segment.rs)
+    - [Pair Selection](Binary%20Search/Step%204/C%20-%20Pair%20Selection.rs)
+  - Step 5
+    - [K-th Number in the Union of Segments](Binary%20Search/Step%205/A%20-%20K-th%20Number%20in%20the%20Union%20of%20Segments.rs)
+    - [Multiplication Table](Binary%20Search/Step%205/B%20-%20Multiplication%20Table.rs)
+    - [K-th Sum](Binary%20Search/Step%205/C%20-%20K-th%20Sum.rs)
