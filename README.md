@@ -130,3 +130,27 @@
     - [Adjacency Lists](Introduction%20to%20Graph%20Theory/Step%204/C%20-%20Adjacency%20Lists.rs)
     - [Two Edges](Introduction%20to%20Graph%20Theory/Step%204/D%20-%20Two%20Edges.rs)
     - [Complete Subgraphs](Introduction%20to%20Graph%20Theory/Step%204/E%20-%20Complete%20Subgraphs.rs)
+
+- **Two Pointers Method**
+  - Step 1
+    - [Merging Arrays](Two%20Pointers%20Method/Step%201/A%20-%20Merging%20Arrays.rs)
+    - [Number of Smaller](Two%20Pointers%20Method/Step%201/B%20-%20Number%20of%20Smaller.rs)
+    - [Number of Equal](Two%20Pointers%20Method/Step%201/C%20-%20Number%20of%20Equal.rs)
+  - Step 2
+    - [Segment with Small Sum](Two%20Pointers%20Method/Step%202/A%20-%20Segment%20with%20Small%20Sum.rs)
+    - [Segment with Big Sum](Two%20Pointers%20Method/Step%202/B%20-%20Segment%20with%20Big%20Sum.rs)
+    - [Number of Segments with Small Sum](Two%20Pointers%20Method/Step%202/C%20-%20Number%20of%20Segments%20with%20Small%20Sum.rs)
+    - [Number of Segments with Big Sum](Two%20Pointers%20Method/Step%202/D%20-%20Number%20of%20Segments%20with%20Big%20Sum.rs)
+    - [Segments with Small Set](Two%20Pointers%20Method/Step%202/E%20-%20Segments%20with%20Small%20Set.rs)
+    - [Segments with Small Spread](Two%20Pointers%20Method/Step%202/F%20-%20Segments%20with%20Small%20Spread.rs)
+    - [Coprime Segment](Two%20Pointers%20Method/Step%202/G%20-%20Coprime%20Segment.rs)
+  - Step 3
+    - [Looped Playlist](Two%20Pointers%20Method/Step%203/A%20-%20Looped%20Playlist.rs)
+    - [Total Length](Two%20Pointers%20Method/Step%203/B%20-%20Total%20Length.rs)
+    - [Che city](Two%20Pointers%20Method/Step%203/C%20-%20Che%20city.rs)
+    - [Stylish clothes](Two%20Pointers%20Method/Step%203/D%20-%20Stylish%20clothes.rs)
+    - [Knapsack on a Segment](Two%20Pointers%20Method/Step%203/E%20-%20Knapsack%20on%20a%20Segment.rs)
+    - [Card Substrings](Two%20Pointers%20Method/Step%203/F%20-%20Card%20Substrings.rs)
+    - [Not Very Rude Substring](Two%20Pointers%20Method/Step%203/G%20-%20Not%20Very%20Rude%20Substring.rs)
+    - [A-B Knapsack](Two%20Pointers%20Method/Step%203/H%20-%20A-B%20Knapsack.rs)
+    - [Segment with the Required Subset](Two%20Pointers%20Method/Step%203/I%20-%20Segment%20with%20the%20Required%20Subset.rs)
